@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int maxi = INT32_MIN, mini = INT32_MAX;
+  int arr[5] = {};
+  cout << "Enter 5 array numbers " << endl;
+  for (int i = 0; i < 5; i++) {
+    cin >> arr[i];
+  }
+  cout << "size of array is : " << sizeof(arr) / sizeof(arr[0]) << endl;
+  for (int i = 0; i < (sizeof(arr) / sizeof(arr[0])); i++) {
+    maxi = max(maxi, arr[i]);
+    mini = min(mini, arr[i]);
+    // cout<<"maxi  "<<maxi<<endl;
+    // cout<<"mini  "<<mini<<endl;
+  }
+
+  cout << "\n\n The maximum number is : " << maxi
+       << "\n\n The minimum number is : " << mini << endl;
+  return 0;
+}
